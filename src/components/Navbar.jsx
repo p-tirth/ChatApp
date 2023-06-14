@@ -1,6 +1,7 @@
 import React from 'react'
-import mona from '../img/mona.jpg'
+import { signOut } from 'firebase/auth'
 import { auth } from '../firebase'
+import mona from '../img/mona.jpg'
 
 const Navbar = () => {
   return (
