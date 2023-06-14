@@ -4,11 +4,13 @@ import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import {auth,storage} from '../firebase'
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore"; 
+import { useNavigate, Link } from 'react-router-dom';
 
 
 export const Register = () => {
 
   const [err,setErr] = useState(false)
+  const navigate = useNavigate();
 
   const handleSubmit = async (e)=>{
     e.preventDefault()
@@ -21,11 +23,12 @@ export const Register = () => {
   try{
 
     const res = await createUserWithEmailAndPassword(auth, email, password)
+    navigate('/')
   }catch(err){
     setErr(true);
   }
 
-  }
+  };
   return (
     <div className='formContainer'>
         <div className="formWrapper">
@@ -39,7 +42,7 @@ export const Register = () => {
                 <button>Sign up</button>
                 {err && <span>Somthing went wrong</span>}
             </form>
-            <p>Already have a account? Login</p>
+            <p>Already have a account? <Link to="/login">Login</Link></p>
         </div>
     </div>
   )
