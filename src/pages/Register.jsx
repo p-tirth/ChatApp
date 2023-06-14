@@ -4,14 +4,14 @@ import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import {auth,storage,db} from '../firebase'
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore"; 
-import { useNavigate, Link } from "react-router-dom";
-
+import { useNavigate, Link } from 'react-router-dom';
+// import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 
 export const Register = () => {
   const [err, setErr] = useState(false);
   const [loading, setLoading] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     setLoading(true);
@@ -47,7 +47,7 @@ export const Register = () => {
 
             //create empty user chats on firestore
             await setDoc(doc(db, "userChats", res.user.uid), {});
-            // navigate("/");
+            navigate("/");
           } catch (err) {
             console.log(err);
             setErr(true);
@@ -59,7 +59,7 @@ export const Register = () => {
       setErr(true);
       setLoading(false);
     }
-  };
+  }; 
   return (
     <div className='formContainer'>
         <div className="formWrapper">
@@ -73,7 +73,7 @@ export const Register = () => {
                 <button>Sign up</button>
                 {err && <span>Somthing went wrong</span>}
             </form>
-            <p>Already have a account? Login</p>
+            <p>Already have a account? <Link to="/login">Login</Link></p>
         </div>
     </div>
   )
