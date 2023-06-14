@@ -1,5 +1,6 @@
 import React from 'react'
 import mona from '../img/mona.jpg'
+import { auth } from '../firebase'
 
 const Navbar = () => {
   return (
@@ -8,7 +9,7 @@ const Navbar = () => {
       <div className="user">
         <img className="profile"src={mona} alt="b"/>
         <span>Tirth</span>
-        <button>Logout</button>
+        <button onClick={()=>signOut(auth)}>Logout</button>
       </div>
     </div>
   )
