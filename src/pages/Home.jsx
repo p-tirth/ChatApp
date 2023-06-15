@@ -4,7 +4,7 @@ import { Chat } from '../components/chat'
 import { Chats } from '../components/chats'
 import Input from '../components/Input'
 import Message from '../components/Message'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 import Search from '../components/Search'
 import { Sidebar } from '../components/sidebar'
 

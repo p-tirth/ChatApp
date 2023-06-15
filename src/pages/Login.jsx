@@ -15,7 +15,7 @@ export const Login = () => {
     const email = e.target[0].value
     const password = e.target[1].value
     // const file = e.target[3].files[0]
-    console.log(e.target[1].value)
+    // console.log(e.target[1].value)
 
   try{
     await signInWithEmailAndPassword(auth,email,password)
