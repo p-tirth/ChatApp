@@ -9,6 +9,7 @@ import Search from 'src/components/Search'
 import { Sidebar } from 'src/components/sidebar'
 
 export default function Home() {
+  consol.log("wokring")
   return (
     <div className='home'>
       <div className="container">
