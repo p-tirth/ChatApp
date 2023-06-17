@@ -1,5 +1,4 @@
 import React from 'react'
-import { Login } from './Login'
 import { Chat } from '../components/Chat'
 import { Sidebar } from '../components/sidebar'
 
