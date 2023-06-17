@@ -7,7 +7,6 @@ import Message from 'src/components/Message'
 import Navbar from 'src/components/navbar'
 import Search from 'src/components/Search'
 import { Sidebar } from 'src/components/sidebar'
-import {Sidebar} from "src/components/Sidebar.jsx"
 
 export default function Home() {
   return (
