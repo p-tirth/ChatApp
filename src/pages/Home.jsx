@@ -1,6 +1,6 @@
 import React from 'react'
-import { Chat } from '../components/Chat'
-import { Sidebar } from '../components/sidebar'
+import  Chat  from '../components/Chat'
+import  Sidebar  from '../components/sidebar'
 
 
 export default function Home() {
