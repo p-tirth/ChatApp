@@ -1,6 +1,6 @@
 import React from 'react'
 import { Messages } from './Messages'
-import Input from './Input'
+import Input from './Iinput'
 
  const Chat = () => {
   return (
