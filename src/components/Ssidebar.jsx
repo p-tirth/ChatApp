@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Nnavbar'
-import Search from './Search'
-import { Chats } from './chats'
+import Search from './Ssearch'
+import { Chats } from './Cchats'
 
  const Sidebar = () => {
   return (
