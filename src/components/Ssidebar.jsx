@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from './navbar'
+import Navbar from './Nnavbar'
 import Search from './Search'
 import { Chats } from './chats'
 
