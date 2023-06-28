@@ -23,12 +23,12 @@ const Search = () => {
   }
 
   const handleKey = e=>{
-    e.code === "Enter" && handleSearch();
+    e.keyCode === 13 && handleSearch();
   }
   const handleSelect = async () =>{
     const combinedId = currentUser.uid > user.uid ? currentUser.uid + user.uid : user.uid + currentUser.uid
     try{
-      console.log(combinedId)
+      // console.log(combinedId)
       const res = await getDoc(doc(db,"chats",combinedId))
       if(!res.exists()){
         console.log("?")
