@@ -68,6 +68,9 @@ const Search = () => {
           </div>
         </div>}
       </div>
+      <div className='searchButton'>
+        <button onClick={handleSearch}>search</button>
+      </div>
     </div>
   )
   }

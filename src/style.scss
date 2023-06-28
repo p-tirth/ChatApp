@@ -146,10 +146,13 @@ $darkColor:#2f2d52;
             }
             .search{
                 border-bottom: 1px solid gray;
+                display: flex;
+                align-items: center;
+
 
                 .searchForm{
                     padding: 10px;
-
+                    
                     input{
                         background-color: transparent;
                         border: none;
@@ -159,6 +162,14 @@ $darkColor:#2f2d52;
                             color: lightgrey;
                         }
                     }
+                }
+                button{
+                    border: none;
+                    padding: 5px;
+                    color: white;
+                    background-color: lightblue;
+                    cursor: pointer;
+                    border-radius: 10px;
                 }
             }
             .userChat{
